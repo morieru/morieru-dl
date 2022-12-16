@@ -5,7 +5,12 @@ services:
     hostname: morieru-dl
     build:
       context: ./
+      args:
+        UID: 1000
+        GID: 1000
+        USERNAME: app
+        GROUPNAME: app
       dockerfile: Dockerfile
     volumes:
-      - /share/morierus:/root/morierus
-      - ./share:/root/share
+      - /share/morierus:/home/app/morierus
+      - ./share:/home/app/share
