@@ -74,9 +74,9 @@ def main():
 
     schedule.run_all()
 
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
+    # while True:
+    #     schedule.run_pending()
+    #     time.sleep(60)
 
 
 def end_id(id):
