@@ -1,0 +1,11 @@
+services:
+  morieru-dl:
+    image: morieru-dl
+    container_name: morieru-dl
+    hostname: morieru-dl
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /share/morierus:/root/morierus
+      - ./share:/root/share

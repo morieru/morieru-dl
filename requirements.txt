@@ -1,0 +1,6 @@
+gspread
+oauth2client
+tweepy
+requests
+python-dotenv
+schedule
