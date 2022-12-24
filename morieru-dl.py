@@ -63,8 +63,10 @@ def download_morieru():
     morierus = os.listdir("./morierus/")
     morierus_file = [f for f in morierus if os.path.isfile(os.path.join("./morierus/", f))]
 
-    with open(MORIERUS_JSON, "w") as f:
-        json.dump(morierus_file, f, indent=4)
+    morierus_json = {'morierus': morierus_file}
+
+    with open(MORIERUS_JSON, "w", encoding="utf-8") as f:
+        json.dump(morierus_json, f, indent=4)
 
 
 def main():
